@@ -92,28 +92,72 @@
 
       <div class="poimai_ribu">
         <div class="otziv">
-          <div class="otziv_img"></div>
-          <p></p>
+          <div class="otziv_img oimg1"></div>
+          <p>РЫБААААААААААААААК</p>
         </div>
         <div class="otziv">
-          <div class="otziv_img"></div>
-          <p></p>
+          <div class="otziv_img oimg2"></div>
+          <p>ВСе понравилось, все нормально</p>
         </div>
         <div class="otziv">
-          <div class="otziv_img"></div>
-          <p></p>
+          <div class="otziv_img oimg3"></div>
+          <p>АААААААААААААААААААА АААААААААААААААААААААААААААА</p>
         </div>
       </div>
 
+
+
+      <div class="where_are_we">
+        
+      </div>
     </v-main>
+
+      <v-footer
+    dark
+    padless
+  >
+    <v-card
+      flat
+      tile
+      class="green lighten-1 white--text text-center"
+    >
+      <v-card-text>
+        <v-btn
+          v-for="icon in icons"
+          :key="icon"
+          class="mx-4 white--text"
+          icon
+        >
+          <v-icon size="24px">
+            {{ icon }}
+          </v-icon>
+        </v-btn>
+      </v-card-text>
+
+      <v-card-text class="white--text pt-0">
+        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      </v-card-text>
+
+      <v-divider></v-divider>
+
+      <v-card-text class="white--text">
+        {{ new Date().getFullYear() }} — <strong>У Осетра</strong>
+      </v-card-text>
+    </v-card>
+  </v-footer>
   </v-app>
 </template>
 
 <script>
-
-export default {
-  name: 'App',
-};
+  export default {
+    data: () => ({
+      icons: [
+        'mdi-telegram',
+        'mdi-instagram',
+        'mdi-vk',
+      ],
+    }),
+  }
 </script>
 
 
@@ -231,7 +275,7 @@ export default {
     margin: auto;
     width: 300px;
     height: 500px;
-    background-color: red;
+    background-color: rgba(255, 255, 255, 0.4);
   }
 
   .otziv_img {
@@ -239,6 +283,24 @@ export default {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background-color: white;
+    background-size: 300px 300px;
+  }
+
+  .oimg1 {
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4842f970-3380-488d-9b8f-f6c0c57d085d/d6seijy-76a3d242-860b-4fce-aa89-482923e4d4ac.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ4NDJmOTcwLTMzODAtNDg4ZC05YjhmLWY2YzBjNTdkMDg1ZFwvZDZzZWlqeS03NmEzZDI0Mi04NjBiLTRmY2UtYWE4OS00ODI5MjNlNGQ0YWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.uyVDhOOWleX6l7hqN2hzyPkdqZiAmmpm_C0f07aLI5w");
+  }
+
+  .oimg2 {
+    background-image: url("https://cdn24.img.ria.ru/images/07e4/03/0b/1568445614_184:263:2315:1462_600x0_80_0_0_22714ab228feb8d09df8eff75ad30b8a.jpg");
+  }
+
+  .oimg3 {
+    background-image: url("https://i.ytimg.com/vi/MnnbcUH6Y7k/maxresdefault.jpg");
+  }
+
+  .where_are_we {
+    width: 100%;
+    height: 995px;
+    background-color: red;
   }
 </style>
