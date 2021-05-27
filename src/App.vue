@@ -22,14 +22,10 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="login_kuda_nibud"
-        target="_blank"
-        text
-      >
+      <div>
         <span class="mr-2">I-2EA-A90-F4-7D</span>
         <v-icon>mdi-phone</v-icon>
-      </v-btn>
+      </div>
     </v-app-bar>
 
     <v-main>
@@ -47,7 +43,7 @@
 
 
       <div class="who_we_are">
-        <div class="who_we_are_in">
+        <div class="who_we_are_in zind">
           <div class="left_part">
             <h3>Почему мы?</h3>
             <ul>
@@ -70,45 +66,47 @@
       </div>
 
       <div class="udochki">
-        <div class="cardd">
+        <div class="cardd zind">
           <div class="cardd_img cimg1"></div>
           <h3>Удочка какая-нибудь</h3>
-          <p>Купи ее и будет тебе счастье ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ</p>
-          <div class="price"><p>450</p></div>
+          <p clas>Купи ее и будет тебе счастье ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ</p>
+          <div class="price"><p class="pprice">450</p></div>
         </div>
-        <div class="cardd">
+        <div class="cardd zind">
           <div class="cardd_img cimg2"></div>
           <h3>Удочка какая-нибудь</h3>
-          <p>Купи ее и будет тебе счастье ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ</p>
-          <div class="price"><p>450</p></div>
+          <p clas>Купи ее и будет тебе счастье ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ ТЕКСТ</p>
+          <div class="price"><p class="pprice">450</p></div>
         </div>
-        <div class="cardd">
+        <div class="cardd zind">
           <div class="cardd_img cimg3"></div>
           <h3>НАПАЛМ</h3>
-          <p>Купи ее и будет тебе счастье ДЖОННИ У ТЕБЯ НЕТ НОГИ ДЖОННИ ААААААААААААА АААААААААА  ААААААААААААААААААА ААААА</p>
-          <div class="price"><p>450</p></div>
+          <p clas>Купи ее и будет тебе счастье ДЖОННИ У ТЕБЯ НЕТ НОГИ ДЖОННИ ААААААААААААА АААААААААА  ААААААААААААААААААА ААААА</p>
+          <div class="price"><p class="pprice">бесплатно</p></div>
         </div>
       </div>
 
       <div class="poimai_ribu">
-        <div class="otziv">
+        <div class="otziv zind">
           <div class="otziv_img oimg1"></div>
-          <p>РЫБААААААААААААААК</p>
+          <h4 style="position: relative; left: 10px; font-size: 25px;">Типа отзыв 1</h4>
+          <p class="potziv">РЫБААААААААААААААК</p>
         </div>
-        <div class="otziv">
+        <div class="otziv zind">
           <div class="otziv_img oimg2"></div>
-          <p>ВСе понравилось, все нормально</p>
+          <h4 style="position: relative; left: 10px; font-size: 25px;">Типа отзыв 2</h4>
+          <p class="potziv">ВСе понравилось, все нормально</p>
         </div>
-        <div class="otziv">
+        <div class="otziv zind">
           <div class="otziv_img oimg3"></div>
-          <p>АААААААААААААААААААА АААААААААААААААААААААААААААА</p>
+          <h4 style="position: relative; left: 10px; font-size: 25px;">Типа отзыв 3</h4>
+          <p class="potziv">ААААААААААА ААААААААА ААААААА ААААААААААА АААААААА АА</p>
         </div>
       </div>
 
 
 
       <div class="where_are_we">
-        
       </div>
     </v-main>
 
@@ -164,6 +162,10 @@
 <style>
   .v-mainn {
     text-align: center;
+  }
+
+  .zind {
+    z-index: 12312312;
   }
 
   .mainh1 {
@@ -238,17 +240,26 @@
   .cardd_img {
     width: 450px;
     height: 450px;
-    background-color: red;
     background-size: 450px;
   }
 
   .price {
     width: 200px;
     height: 50px;
-    background-color: grey;
     margin: auto;
+    border: 4px solid grey;
     border-radius: 25%;
     text-align: center;
+    position: relative;
+    bottom: -70px;
+  }
+  .price:hover {
+    border: 0px solid grey;
+    background-color: grey;
+  }
+  .price:hover .pprice {
+    top: 11px;
+    color: white;
   }
 
   .cimg1 {
@@ -275,7 +286,7 @@
     margin: auto;
     width: 300px;
     height: 500px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.7);
   }
 
   .otziv_img {
@@ -301,6 +312,19 @@
   .where_are_we {
     width: 100%;
     height: 995px;
-    background-color: red;
+    background-image: url("../public/solovki.png");
+    background-size: 100% 995px;
+  }
+
+  .pprice {
+    font-size: 20px;
+    position: relative;
+    top: 7px;
+  }
+
+  .potziv {
+    font-size: 20px;
+    position: relative;
+    left: 15px;
   }
 </style>
